@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800;900&display=swap");
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	margin-top: 1.3em;
+	margin-left: 1em;
+}
+
+.top {
+	padding-inline: 10px;
+	color: hsl(224, 21%, 14%);
+	font-size: 1.3em;
+	font-weight: 800;
+	position: relative;
+	display: inline-flex;
+}
+
+.read {
+	cursor: pointer;
+	margin-top: 0.3em;
+	white-space: nowrap;
+	width: fit-content;
+	font-size: 0.7em;
+	margin-left: 16vw;
+	color: hsl(219, 12%, 42%);
+	font-weight: 500;
+}
+
+.count {
+	border-radius: 18%;
+	padding-inline: 10px;
+	color: white;
+	background: hsl(219, 85%, 26%);
+	margin-left: 0.5em;
+}
+
+.content {
+	width: fit-content;
+	margin-top: 2em;
+}
+
+.post img {
+	margin-bottom: 2em;
+	width: 2.4em;
+	align-self: flex-start;
+}
+
+.text {
+	color: hsl(219, 14%, 63%);
+	margin-left: 1em;
+}
+
+.post {
+	margin-bottom: 0.7em;
+	padding: 18px 18px 0px 18px;
+	align-self: center;
+	display: flex;
+	background: white;
+}
+
+.name {
+	cursor: pointer;
+	color: #000;
+	font-weight: 800;
+}
+
+.refer {
+	cursor: pointer;
+	color: hsl(219, 12%, 42%);
+	font-weight: 800;
+}
+
+.unread {
+	margin-left: 0.3em;
+	display: inline-flex;
+	position: relative;
+	width: 10px;
+	height: 10px;
+	background: hsl(1, 90%, 64%);
+	border-radius: 50%;
+}
+
+#divider {
+	height: 30px;
+}
+
+.msg:hover {
+	background: hsl(211, 68%, 94%);
+}
+
+.group::before {
+	content: "\00a0";
+}
+
+.group {
+	cursor: pointer;
+	color: hsl(219, 85%, 26%);
+	font-weight: 800;
+}
+
+.notifications-box {
+	background: white;
+}
+
+.msg {
+	margin-top: 0.5em;
+	color: hsl(219, 12%, 42%);
+	padding: 10px;
+	display: flex;
+	border: 1px solid hsl(211, 68%, 94%);
+}
+
+.chess-image {
+	text-align: right;
+	float: right;
+	display: inline-flex;
+	position: relative;
+	margin-left: 2vw;
+}
+
+.name:hover,
+.group:hover,
+.read:hover,
+.refer:hover {
+	color: hsl(219, 85%, 26%);
+}
+@media screen and (min-width: 750px) {
+	body {
+		background: hsl(210, 60%, 98%);
+	}
+	.content {
+		max-width: 40em;
+	}
+	.top {
+		width: 100%;
+	}
+
+	.chess-image {
+		margin-left: 10vw;
+	}
+
+	.notifications-box {
+		box-shadow: 1px 1px 5px rgba(0.1, 0.1, 0.1, 0.1);
+		margin-top: 3vh;
+		padding: 20px;
+		border-radius: 3%;
+		transition: margin-top 1s 0.1s ease-out;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	body {
+		margin-left: 33vw;
+	}
+}

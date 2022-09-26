@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/images/favicon-32x32.png" />
+		<title>Notifications</title>
+	</head>
+	<body>
+		<div class="notifications-box">
+			<div class="top">
+				Notifications
+				<div class="count">3</div>
+				<div class="read">Mark all as read</div>
+			</div>
+			<div class="content">
+				<div class="post">
+					<img
+						src="./assets/images/avatar-mark-webber.webp"
+						alt="mark webber profile picture"
+					/>
+					<div class="text">
+						<span class="name">Mark Webber</span>
+						reacted to your recent post
+						<span class="refer">My first tournament today!</span>
+						<div class="unread"></div>
+						<div class="time">1m ago</div>
+					</div>
+				</div>
+				<div class="post">
+					<img
+						src="./assets/images/avatar-angela-gray.webp"
+						alt="angela gray profile picture"
+					/>
+					<div class="text">
+						<span class="name">Angela Gray</span>
+						followed you
+						<div class="unread"></div>
+						<div class="time">5m ago</div>
+					</div>
+				</div>
+				<div class="post">
+					<img
+						src="./assets/images/avatar-jacob-thompson.webp"
+						alt="jacob thompson profile picture"
+					/>
+					<div class="text">
+						<span class="name">Jacob Thompson</span>
+						has joined your group
+						<span class="refer"></span>
+						<a class="group">Chess Club</a>
+						<div class="unread"></div>
+						<div class="time">1 days ago</div>
+					</div>
+				</div>
+				<div class="post">
+					<img
+						src="./assets/images/avatar-rizky-hasanuddin.webp"
+						alt="rizky hassanudin profile picture"
+					/>
+					<div class="text">
+						<span class="name">Rizky Hassanudin</span>
+						sent you a private message
+						<div class="time">5 days ago</div>
+						<span class="msg"
+							>Hello, thanks for setting up the Chess Club. I've been a member
+							for a few weeks now and I'm already having lots of fun and
+							improving my game.</span
+						>
+					</div>
+				</div>
+				<div class="post">
+					<img
+						src="./assets/images/avatar-kimberly-smith.webp"
+						alt="kimberly smith profile picture"
+					/>
+					<div class="text">
+						<span class="name">Kimberly Smith</span>
+						commented<wbr /> on your picture
+						<span class="refer"></span>
+						<div class="time">1 week ago</div>
+					</div>
+					<div class="chess-image">
+						<img src="./assets/images/image-chess.webp" alt="chess image" />
+					</div>
+				</div>
+				<div class="post">
+					<img
+						src="./assets/images/avatar-nathan-peterson.webp"
+						alt="nathan peterson profile picture"
+					/>
+					<div class="text">
+						<span class="name">Nathan Peterson</span>
+						reacted to your recent post
+						<span class="refer"
+							>5 end-game strategies to increase your win rate</span
+						>
+						<div class="time">2 weeks ago</div>
+					</div>
+				</div>
+				<div class="post">
+					<img
+						src="./assets/images/avatar-anna-kim.webp"
+						alt="anna kim profile picture"
+					/>
+					<div class="text">
+						<span class="name">Anna Kim</span>
+						left the group
+						<a
+							class="group"
+							title="First rule of Chess Club is: Do not talk about Chess Club"
+							>Chess Club</a
+						>
+						<div class="time">2 weeks ago</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			const unread = document.getElementsByClassName("unread");
+			const count = document.querySelector(".count");
+			const markasread = document.querySelector(".read");
+			const post = document.querySelectorAll(".post");
+			for (i = 0; i < unread.length; i++) {}
+			count.innerHTML = i;
+
+			function read() {
+				if (count != 0) {
+					for (i = 0; i < unread.length; i++) {
+						unread[i].style.display = "none";
+					}
+					for (i = 0; i < post.length; i++) {
+						post[i].style.background = "white";
+					}
+					count.innerHTML = 0;
+				}
+			}
+			markasread.addEventListener("click", read);
+
+			for (i = 0; i < post.length; i++) {
+				if (post[i].querySelectorAll(".unread").length == 1) {
+					for (i = 0; i < unread.length; i++) {
+						post[i].style.background = "hsl(210, 60%, 98%)";
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
